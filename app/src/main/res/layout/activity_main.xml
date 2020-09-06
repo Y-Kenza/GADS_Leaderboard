@@ -35,7 +35,7 @@
             android:minWidth="80dp"
             android:minHeight="30dp"
             android:background="@drawable/btn_rounded"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textStyle="bold"
