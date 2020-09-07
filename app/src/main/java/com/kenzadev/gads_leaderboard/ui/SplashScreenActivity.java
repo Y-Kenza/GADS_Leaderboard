@@ -1,4 +1,4 @@
-package com.kenzadev.gads_leaderboard;
+package com.kenzadev.gads_leaderboard.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
@@ -6,8 +6,8 @@ import androidx.appcompat.widget.AppCompatImageView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+
+import com.kenzadev.gads_leaderboard.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
