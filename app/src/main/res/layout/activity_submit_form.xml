@@ -124,7 +124,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:backgroundTint="@null" />
 </LinearLayout>

@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="16dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/skillBadge"
@@ -27,7 +28,7 @@
             android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/learnerName"
+                android:id="@+id/learnerSkillName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="6dp"
@@ -36,10 +37,10 @@
                 android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/learnerDetails"
+                android:id="@+id/learnerSkillDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/learnerName"
+                android:layout_below="@+id/learnerSkillName"
                 android:paddingStart="6dp"
                 android:paddingEnd="6dp"
                 android:text="@string/learner_details"

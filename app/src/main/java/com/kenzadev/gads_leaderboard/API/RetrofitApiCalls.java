@@ -26,5 +26,4 @@ public interface RetrofitApiCalls {
                                         @Field("entry.1877115667") String first_name,
                                         @Field("entry.2006916086") String last_name,
                                         @Field("entry.284483984") String project_link);
-
 }
