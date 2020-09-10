@@ -17,6 +17,7 @@ import com.kenzadev.gads_leaderboard.R;
 import com.kenzadev.gads_leaderboard.models.LearningLeaderModel;
 import com.kenzadev.gads_leaderboard.models.SkillIQModel;
 
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -46,12 +47,6 @@ public class SkillIQLeadersFragment extends Fragment {
         return rootView;
     }
 
-  /*  @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initAdapter();
-    }*/
-
     public void initAdapter() {
         Call<List<SkillIQModel>> call = service.getSkillLeaders();
         call.enqueue(new Callback<List<SkillIQModel>>() {
@@ -60,7 +55,7 @@ public class SkillIQLeadersFragment extends Fragment {
                 if (response.isSuccessful()) {
                     List<SkillIQModel> learners = response.body();
 
-                    
+                    Collections.sort(learners, Collections.reverseOrder());
                     adapter = new SkillIQAdapter(getActivity(),learners);
 
                     LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext());

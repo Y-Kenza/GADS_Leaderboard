@@ -1,6 +1,6 @@
 package com.kenzadev.gads_leaderboard.models;
 
-public class LearningLeaderModel {
+public class LearningLeaderModel implements Comparable<LearningLeaderModel> {
     private String name;
     private int hours;
     private String country;
@@ -43,6 +43,19 @@ public class LearningLeaderModel {
 
     public void setBadgeUrl(String badgeUrl) {
         this.badgeUrl = badgeUrl;
+    }
+
+    @Override
+    public int compareTo(LearningLeaderModel learningLeaderModel) {
+        if (this.getHours()>learningLeaderModel.getHours())
+        {
+            return 1;
+        }
+        else if (this.getHours()<learningLeaderModel.getHours())
+        {
+            return -1;
+        }
+        return 0;
     }
 }
 

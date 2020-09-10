@@ -20,6 +20,8 @@ import com.kenzadev.gads_leaderboard.R;
 import com.kenzadev.gads_leaderboard.models.LearningLeaderModel;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -49,12 +51,6 @@ public class LearningLeadersFragment extends Fragment {
         return rootView;
     }
 
-  /*  @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initAdapter();
-    }*/
-
     public void initAdapter() {
         Call<List<LearningLeaderModel>> call = service.getLearningLeaders();
         call.enqueue(new Callback<List<LearningLeaderModel>>() {
@@ -63,6 +59,7 @@ public class LearningLeadersFragment extends Fragment {
                 if (response.isSuccessful()) {
                     List<LearningLeaderModel> learners = response.body();
 
+                    Collections.sort(learners, Collections.reverseOrder());
                     adapter = new LearningLeadersAdapter(getActivity(),learners);
 
                     LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext());

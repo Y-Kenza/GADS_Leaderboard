@@ -1,6 +1,6 @@
 package com.kenzadev.gads_leaderboard.models;
 
-public class SkillIQModel {
+public class SkillIQModel implements Comparable<SkillIQModel> {
     private String name;
     private int score;
     private String country;
@@ -45,4 +45,16 @@ public class SkillIQModel {
         this.badgeUrl = badgeUrl;
     }
 
+    @Override
+    public int compareTo(SkillIQModel skillIQModel) {
+        if (this.getScore()>skillIQModel.getScore())
+        {
+            return 1;
+        }
+        else if (this.getScore()<skillIQModel.getScore())
+        {
+            return -1;
+        }
+        return 0;
+    }
 }
