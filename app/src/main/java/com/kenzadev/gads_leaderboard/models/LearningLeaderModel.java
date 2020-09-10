@@ -1,6 +1,6 @@
 package com.kenzadev.gads_leaderboard.models;
 
-public class LearningLeaderModel implements Comparable<LearningLeaderModel> {
+public class LearningLeaderModel {
     private String name;
     private int hours;
     private String country;
