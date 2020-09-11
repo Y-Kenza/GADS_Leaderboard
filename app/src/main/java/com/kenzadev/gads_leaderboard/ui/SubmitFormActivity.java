@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.kenzadev.gads_leaderboard.API.RetrofitApiCalls;
 import com.kenzadev.gads_leaderboard.API.RetrofitClient;
@@ -122,7 +123,7 @@ public class SubmitFormActivity extends AppCompatActivity {
             final AlertDialog alertDialog = builder.create();
             alertDialog.show();
 
-            Button approveButton = view.findViewById(R.id.approveButton);
+            MaterialButton approveButton = view.findViewById(R.id.approveButton);
             ImageButton cancelDialog = view.findViewById(R.id.cancelSubmissionButton);
 
             //if the user confirms
